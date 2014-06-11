@@ -1,17 +1,18 @@
 class Application
  
   def run
-    begin
+    loop do 
     show_main_menu
     @input = gets.chomp
       if @input == "new"
-        new_contact
+        Contact.create 
       elsif @input == "list"
         list
-      else
-      end until @input == "quit"
-        print "Thank You come again! \n"
-      end    
+      else @input == "quit"
+        print "Thank You come again! \n".red
+        abort 
+      end
+    end    
   end
  
   private
@@ -24,5 +25,4 @@ class Application
     puts " quit     - Exit Application"
     print "> "
   end
- 
 end

@@ -1,3 +1,4 @@
+require 'colorize'
 require_relative 'contact'
 require_relative 'application'
  
