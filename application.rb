@@ -5,9 +5,9 @@ class Application
     show_main_menu
     @input = gets.chomp
       if @input == "new"
-        Contact.create 
+        Contact.new 
       elsif @input == "list"
-        list
+        Contact.all
       else @input == "quit"
         print "Thank You come again! \n".red
         abort 

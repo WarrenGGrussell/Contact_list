@@ -13,7 +13,9 @@ describe Contact do
  
   # use . for class methods
   describe ".create" do
- 
+    it "should take the user inputs and send them to the empty array"
+      Contact.new(name, email) = contact 
+      @@contacts << contact
   end
  
   # use . for class methods
