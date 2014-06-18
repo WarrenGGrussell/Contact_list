@@ -12,10 +12,11 @@ describe Contact do
   end
  
   # use . for class methods
-  describe ".create" do
-    it "should take the user inputs and send them to the empty array"
-      Contact.new(name, email) = contact 
-      @@contacts << contact
+  describe ".new" do
+    it "takes name a new contact and ships it to our array" do 
+      Contact.new("bill", "asd@z.com")
+      @@contacts << Contact.new
+    end
   end
  
   # use . for class methods
@@ -25,7 +26,10 @@ describe Contact do
  
   # use . for class methods
   describe ".all" do
- 
+    it "returns an array of hashes (contact)" do 
+      
+
+    end
   end
  
 end

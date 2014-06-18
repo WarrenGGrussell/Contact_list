@@ -38,12 +38,45 @@ class Contact
       # TODO: Return the list of contacts, as is
       # grabs everything I appened to the @@contacts and shows
       @@contacts.each do |contact|
-        puts contact[:name].blue
-        puts contact[:email].blue
-        puts 
+        show_contact(contact)
       end
-
     end
+# When on the main menu, the user can type in show along with an id (index)
+# of the contact to display their details. 
+# If a contact with that index/id is found, display their details, with each 
+# field being printed on an individual line. 
+# If the contact cannot be found, display a "not found" message.
+
+
+    def show
+      puts "need an index?".green
+      index = gets.chomp.to_i
+      show_contact(@@contacts.at(index))
+    end
+  
+    def show_contact(contact)
+      puts contact[:name].blue
+      puts contact[:email].blue << "\n\n"
+    end
+
+
   end
- 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
